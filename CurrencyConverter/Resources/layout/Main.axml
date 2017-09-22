@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/toolbar" />
+    <TableLayout
+        android:layout_margin="10dp"
+        android:showDividers="middle"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+            <TextView
+                android:layout_column="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From Currency"
+                android:textSize="20sp"
+                android:textColor="@android:color/black" />
+            <Spinner
+                android:layout_marginLeft="20dp"
+                android:layout_column="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fromCurrencySpinner" />
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+            <TextView
+                android:layout_column="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To Currency"
+                android:textSize="20sp"
+                android:textColor="@android:color/black" />
+            <Spinner
+                android:layout_marginLeft="20dp"
+                android:layout_column="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/toCurrencySpinner" />
+        </TableRow>
+    </TableLayout>
+    <EditText
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:maxLines="1"
+        android:hint="Enter Value to Convert"
+        android:id="@+id/fromvalue"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_background" />
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:text="Convert"
+        android:theme="@style/ButtonPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/convert" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:id="@+id/convertedCurrencyValue" />
+</LinearLayout>
